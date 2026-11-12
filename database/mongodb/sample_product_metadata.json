@@ -1,0 +1,518 @@
+[
+  {
+    "product_id": 1,
+    "brand": "QuantumTech",
+    "specifications": {
+      "display": "6.7-inch Dynamic AMOLED 2X, 120Hz, HDR10+",
+      "processor": "Snapdragon 8 Gen 3 (4nm)",
+      "ram": "12GB LPDDR5X",
+      "storage": "256GB UFS 4.0",
+      "battery": "5000 mAh with 65W Fast Charging",
+      "camera": "50MP Main + 12MP Ultra-wide + 10MP Telephoto 3x"
+    },
+    "warranty": "2 Years Comprehensive Manufacturer Warranty",
+    "tags": ["smartphone", "5g", "flagship", "amoled", "electronics"],
+    "attributes": {
+      "color": "Phantom Black",
+      "weight": "198g",
+      "water_resistance": "IP68 Certified",
+      "os": "Android 14 / QuantumOS 6.1"
+    },
+    "additional_metadata": {
+      "in_the_box": ["Smartphone", "USB-C to C Cable", "SIM Ejector Tool", "Quick Start Guide"],
+      "connectivity": ["5G Sub-6/mmWave", "Wi-Fi 7", "Bluetooth 5.3", "NFC"]
+    }
+  },
+  {
+    "product_id": 2,
+    "brand": "EliteComputing",
+    "specifications": {
+      "display": "14.2-inch OLED 2.8K (2880 x 1800), 90Hz",
+      "processor": "Intel Core i7-13700H (14 cores, 20 threads)",
+      "ram": "16GB Dual-Channel LPDDR5 6400MHz",
+      "storage": "1TB PCIe Gen4 NVMe M.2 SSD",
+      "battery": "75Wh with 100W USB-PD GaN Charger",
+      "graphics": "Intel Iris Xe Graphics"
+    },
+    "warranty": "1 Year Onsite Warranty + Accidental Damage Protection",
+    "tags": ["laptop", "ultrabook", "oled", "intel", "productivity"],
+    "attributes": {
+      "color": "Space Gray",
+      "weight": "1.32kg",
+      "chassis": "CNC Aluminum Unibody",
+      "keyboard": "Backlit Chiclet Keyboard with Fingerprint Sensor"
+    },
+    "additional_metadata": {
+      "ports": ["2x Thunderbolt 4", "1x USB-A 3.2 Gen 2", "HDMI 2.1", "3.5mm Audio"],
+      "wireless": ["Wi-Fi 6E (802.11ax)", "Bluetooth 5.2"]
+    }
+  },
+  {
+    "product_id": 3,
+    "brand": "PulseAcoustics",
+    "specifications": {
+      "driver_size": "40mm Bio-Cellulose Dynamic Drivers",
+      "frequency_response": "10Hz - 40,000Hz (Hi-Res Audio)",
+      "active_noise_cancellation": "Hybrid Dual-Feed ANC up to -38dB",
+      "battery_life": "40 Hours (ANC ON) / 60 Hours (ANC OFF)",
+      "charging": "USB-C Quick Charge (10 min charge = 5 hours playback)"
+    },
+    "warranty": "1 Year Replacement Warranty",
+    "tags": ["headphones", "anc", "wireless", "audio", "hi-res"],
+    "attributes": {
+      "color": "Midnight Blue",
+      "weight": "250g",
+      "earcup_material": "Memory Foam Protein Leather"
+    },
+    "additional_metadata": {
+      "codecs": ["LDAC", "AAC", "SBC", "aptX HD"],
+      "multipoint": "Supports simultaneous pairing with 2 devices"
+    }
+  },
+  {
+    "product_id": 4,
+    "brand": "ChronoTech",
+    "specifications": {
+      "display": "1.4-inch Sapphire Crystal AMOLED, 454x454",
+      "sensors": ["Optical Heart Rate", "SpO2 Oxygen", "Barometric Altimeter", "ECG"],
+      "gps": "Dual-Band Multi-GNSS (GPS, GLONASS, Galileo, BeiDou)",
+      "water_rating": "5 ATM + IP68 (Swim-proof up to 50 meters)",
+      "battery": "Up to 14 days typical usage"
+    },
+    "warranty": "1 Year Manufacturer Warranty",
+    "tags": ["smartwatch", "fitness", "gps", "heart-rate", "wearable"],
+    "attributes": {
+      "color": "Titanium Silver with Black Fluoroelastomer Band",
+      "case_size": "46mm",
+      "weight": "52g (excluding strap)"
+    },
+    "additional_metadata": {
+      "compatibility": ["iOS 13.0+", "Android 8.0+"],
+      "sports_modes": ["Running", "Cycling", "Swimming", "Hiking", "100+ Workout Modes"]
+    }
+  },
+  {
+    "product_id": 5,
+    "brand": "VividDisplay",
+    "specifications": {
+      "panel_type": "Fast IPS 10-bit (8-bit + FRC)",
+      "resolution": "3840 x 2160 pixels (4K UHD)",
+      "refresh_rate": "144Hz via DisplayPort 1.4",
+      "response_time": "1ms (GtG)",
+      "brightness": "400 nits (VESA DisplayHDR 400 certified)",
+      "color_gamut": "95% DCI-P3, 100% sRGB"
+    },
+    "warranty": "3 Years Zero Bright Dot Guarantee",
+    "tags": ["monitor", "4k", "gaming", "144hz", "ips"],
+    "attributes": {
+      "screen_size": "27-inch Flat",
+      "stand_adjustability": ["Height 130mm", "Tilt -5 to 20 deg", "Swivel 30 deg", "Pivot 90 deg"],
+      "weight": "6.8kg with stand"
+    },
+    "additional_metadata": {
+      "sync_technology": ["AMD FreeSync Premium Pro", "NVIDIA G-Sync Compatible"],
+      "io_ports": ["2x HDMI 2.1", "1x DP 1.4", "USB 3.0 Hub", "Headphone Out"]
+    }
+  },
+  {
+    "product_id": 6,
+    "brand": "Highland Wool Co.",
+    "specifications": {
+      "material": "100% Superfine Australian Merino Wool (19.5 micron)",
+      "weave": "7-gauge ribbed knit collar and cuffs",
+      "origin": "Ethically sheared in New South Wales"
+    },
+    "warranty": "Lifetime Craftsmanship Guarantee against seam unraveling",
+    "tags": ["sweater", "merino-wool", "clothing", "sustainable", "winter"],
+    "attributes": {
+      "fit": "Regular Fit",
+      "care_instructions": "Hand wash cold or dry clean only, dry flat",
+      "available_sizes": ["S", "M", "L", "XL", "XXL"]
+    },
+    "additional_metadata": {
+      "breathability": "High natural thermal regulation",
+      "odor_resistance": "Naturally antimicrobial"
+    }
+  },
+  {
+    "product_id": 7,
+    "brand": "AeroStorm Apparel",
+    "specifications": {
+      "membrane": "HydroVent 3-Layer Waterproof Breathable Laminate",
+      "waterproof_rating": "20,000mm hydrostatic head",
+      "breathability_rating": "15,000g/m2/24hr",
+      "zippers": "YKK AquaGuard sealed waterproof zippers"
+    },
+    "warranty": "2 Years Weatherproof Warranty",
+    "tags": ["jacket", "waterproof", "outdoor", "hiking", "clothing"],
+    "attributes": {
+      "color": "Alpine Olive / Black",
+      "hood": "3-way adjustable helmet-compatible storm hood",
+      "weight": "420g"
+    },
+    "additional_metadata": {
+      "pockets": ["2 Handwarmer Pockets", "1 External Chest Pocket", "1 Internal Pass Pocket"],
+      "eco_credentials": "PFC-free DWR coating"
+    }
+  },
+  {
+    "product_id": 8,
+    "brand": "UrbanTailor",
+    "specifications": {
+      "fabric": "98% GOTS Certified Organic Cotton, 2% Elastane",
+      "closure": "Corozo nut button and Japanese brass zipper",
+      "pocketing": "Deep herringbone pocket bags"
+    },
+    "warranty": "1 Year Seam & Hardware Warranty",
+    "tags": ["chinos", "trousers", "organic-cotton", "smart-casual"],
+    "attributes": {
+      "cut": "Slim Tapered",
+      "rise": "Mid Rise",
+      "available_colors": ["Khaki", "Navy", "Charcoal", "Olive"]
+    },
+    "additional_metadata": {
+      "pre_washed": "Enzyme washed for soft handfeel and zero shrinkage"
+    }
+  },
+  {
+    "product_id": 9,
+    "brand": "ApexRunner",
+    "specifications": {
+      "outsole": "Vibram Megagrip with 5mm multidirectional traction lugs",
+      "midsole": "Dual-density supercritical EVA foam",
+      "drop": "4mm heel-to-toe drop (28mm heel / 24mm forefoot)",
+      "upper": "Ripstop engineered jacquard mesh with TPU rock guard"
+    },
+    "warranty": "6 Months Sole Warranty (500+ miles guaranteed)",
+    "tags": ["shoes", "trail-running", "vibram", "footwear", "sports"],
+    "attributes": {
+      "weight_per_shoe": "285g (Men size 9)",
+      "lacing": "Ghillie speed lacing system with lace garage"
+    },
+    "additional_metadata": {
+      "terrain": ["Rocky trail", "Mud", "Gravel", "Technical singletrack"]
+    }
+  },
+  {
+    "product_id": 10,
+    "brand": "Oxford & Co.",
+    "specifications": {
+      "fabric": "100% Long-Staple Combed Egyptian Cotton (80s two-ply)",
+      "collar": "Classic 3.25-inch soft roll button-down collar",
+      "buttons": "Genuine Australian mother-of-pearl cross-stitched buttons"
+    },
+    "warranty": "Satisfaction Guarantee",
+    "tags": ["shirt", "oxford", "formal", "cotton", "menswear"],
+    "attributes": {
+      "pattern": "Solid Light Blue",
+      "fit": "Tailored Classic",
+      "cuff": "Two-button adjustable barrel cuff"
+    },
+    "additional_metadata": {
+      "weaving_mill": "Albini Group, Bergamo Italy"
+    }
+  },
+  {
+    "product_id": 11,
+    "brand": "Modena Espresso",
+    "specifications": {
+      "boiler": "Dual Stainless Steel Thermoblock with PID Temperature Control",
+      "pump_pressure": "15-Bar Italian ULKA Electromagnetic Pump",
+      "water_tank_capacity": "2.2 Liters removable reservoir",
+      "portafilter": "58mm commercial-grade chrome-plated brass portafilter",
+      "steam_wand": "Commercial 360-degree ball joint stainless steam wand"
+    },
+    "warranty": "2 Years Domestic Warranty on Pump and Boiler",
+    "tags": ["coffee", "espresso-machine", "appliances", "kitchen", "barista"],
+    "attributes": {
+      "power_rating": "1600 Watts",
+      "dimensions": "32cm W x 35cm D x 40cm H",
+      "body_material": "Brushed 304 Stainless Steel"
+    },
+    "additional_metadata": {
+      "included_accessories": ["Single & Double Baskets", "Blind Filter", "Metal Tamper", "Milk Frothing Pitcher"]
+    }
+  },
+  {
+    "product_id": 12,
+    "brand": "CastelCuisine",
+    "specifications": {
+      "material": "Heavyweight Cast Iron with 3 coats of vitreous enamel",
+      "capacity": "6 Quarts (5.7 Liters)",
+      "oven_safe_temperature": "Up to 500 deg F (260 deg C)"
+    },
+    "warranty": "Limited Lifetime Warranty",
+    "tags": ["cookware", "dutch-oven", "cast-iron", "kitchen"],
+    "attributes": {
+      "color": "Burgundy Red Enamel",
+      "diameter": "28cm",
+      "weight": "5.9kg"
+    },
+    "additional_metadata": {
+      "heat_sources": ["Induction", "Gas", "Electric", "Ceramic Glass", "Oven Safe"]
+    }
+  },
+  {
+    "product_id": 13,
+    "brand": "CuisineTech",
+    "specifications": {
+      "capacity": "10 Liters dual-zone basket",
+      "heating_technology": "Rapid Hot Air Vortex 360",
+      "temperature_range": "40 deg C to 230 deg C",
+      "presets": 12
+    },
+    "warranty": "1 Year Replacement Warranty",
+    "tags": ["air-fryer", "kitchen", "smart-appliances", "cooking"],
+    "attributes": {
+      "touch_display": "Angled LED Digital Display",
+      "basket_coating": "PFOA and BPA-Free Ceramic Non-Stick"
+    },
+    "additional_metadata": {
+      "special_features": ["Sync Cook", "Dual Zone Independent Temp", "Dehydrate Mode"]
+    }
+  },
+  {
+    "product_id": 14,
+    "brand": "Sakai Forge",
+    "specifications": {
+      "blade_core": "VG-10 Super Steel Core (HRC 60-62)",
+      "cladding": "67 alternating layers of SUS410 high-carbon stainless steel",
+      "blade_length": "8.0 inches (203mm)",
+      "edge_angle": "15 degrees per side hand-honed by honbazuke method"
+    },
+    "warranty": "Lifetime Warranty on Steel Integrity",
+    "tags": ["knife", "damascus", "kitchen-knife", "cutlery", "chef"],
+    "attributes": {
+      "handle": "Ergonomic Military-Grade G10 Composite with Mosaic Pin",
+      "balance_point": "Zero balance at pinch-grip bolster",
+      "weight": "240g"
+    },
+    "additional_metadata": {
+      "maintenance": "Hone weekly with ceramic rod; hand wash and dry immediately"
+    }
+  },
+  {
+    "product_id": 15,
+    "brand": "CleanBotics",
+    "specifications": {
+      "navigation": "LiDAR LDS 4.0 Laser Distance Sensor + 3D Obstacle Avoidance",
+      "suction_power": "3000 Pascals",
+      "dustbin_capacity": "450ml with HEPA H11 washable filter",
+      "water_tank": "250ml electronically controlled water pump with 3 flow levels",
+      "battery": "5200mAh Lithium-ion (cleans up to 250 sq meters per charge)"
+    },
+    "warranty": "1 Year Warranty + 2 Years on Battery",
+    "tags": ["robot-vacuum", "smart-home", "lidar", "automation", "cleaning"],
+    "attributes": {
+      "color": "Pearl White",
+      "climbing_threshold": "20mm door thresholds",
+      "voice_assistant": ["Amazon Alexa", "Google Assistant", "Apple Siri Shortcuts"]
+    },
+    "additional_metadata": {
+      "app_features": ["No-Go Zones", "Multi-Floor Mapping (up to 4 maps)", "Room Sequencing"]
+    }
+  },
+  {
+    "product_id": 16,
+    "brand": "O'Reilly Media",
+    "specifications": {
+      "author": "Martin Kleppmann",
+      "isbn": "978-1449373320",
+      "pages": 616,
+      "edition": "1st Edition",
+      "format": "Hardcover / Acid-free Paper"
+    },
+    "warranty": "Publisher Guarantee",
+    "tags": ["books", "databases", "distributed-systems", "software-engineering"],
+    "attributes": {
+      "language": "English",
+      "publication_year": 2017,
+      "topics": ["Storage Engines", "Replication", "Partitioning", "Transactions", "Consensus"]
+    },
+    "additional_metadata": {
+      "academic_level": "Intermediate to Advanced Computer Science"
+    }
+  },
+  {
+    "product_id": 17,
+    "brand": "McGraw Hill",
+    "specifications": {
+      "author": "Silberschatz, Korth, Sudarshan",
+      "isbn": "978-0078022159",
+      "pages": 1376,
+      "edition": "8th Edition",
+      "format": "Hardcover"
+    },
+    "warranty": "Publisher Guarantee",
+    "tags": ["books", "textbook", "adbms", "relational-algebra", "sql"],
+    "attributes": {
+      "language": "English",
+      "publication_year": 2020,
+      "topics": ["ER Model", "Relational Database Design", "Indexing", "Concurrency Control"]
+    },
+    "additional_metadata": {
+      "course_reference": "Standard curriculum for CS University ADBMS courses"
+    }
+  },
+  {
+    "product_id": 18,
+    "brand": "Prentice Hall",
+    "specifications": {
+      "author": "Robert C. Martin (Uncle Bob)",
+      "isbn": "978-0134494166",
+      "pages": 432,
+      "edition": "1st Edition",
+      "format": "Paperback"
+    },
+    "warranty": "Publisher Guarantee",
+    "tags": ["books", "clean-code", "architecture", "solid-principles"],
+    "attributes": {
+      "language": "English",
+      "publication_year": 2017,
+      "topics": ["Component Principles", "SOLID", "Boundaries", "Dependency Rule"]
+    },
+    "additional_metadata": {
+      "series": "Robert C. Martin Series"
+    }
+  },
+  {
+    "product_id": 19,
+    "brand": "O'Reilly Media",
+    "specifications": {
+      "author": "Silvia Botros, Jeremy Tinley",
+      "isbn": "978-1492080510",
+      "pages": 375,
+      "edition": "4th Edition",
+      "format": "Paperback"
+    },
+    "warranty": "Publisher Guarantee",
+    "tags": ["books", "mysql", "innodb", "performance-tuning", "dba"],
+    "attributes": {
+      "language": "English",
+      "publication_year": 2021,
+      "topics": ["InnoDB Architecture", "Indexing Strategies", "Replication", "Cloud MySQL"]
+    },
+    "additional_metadata": {
+      "target_audience": "Production MySQL Administrators and Backend Developers"
+    }
+  },
+  {
+    "product_id": 20,
+    "brand": "O'Reilly Media",
+    "specifications": {
+      "author": "Shannon Bradshaw, Eoin Brazil, Kristina Chodorow",
+      "isbn": "978-1491954461",
+      "pages": 514,
+      "edition": "3rd Edition",
+      "format": "Paperback"
+    },
+    "warranty": "Publisher Guarantee",
+    "tags": ["books", "mongodb", "nosql", "document-store", "aggregation"],
+    "attributes": {
+      "language": "English",
+      "publication_year": 2019,
+      "topics": ["Document Modeling", "Indexing", "Aggregation Framework", "Sharding"]
+    },
+    "additional_metadata": {
+      "practical_examples": "Python and Node.js code snippets included"
+    }
+  },
+  {
+    "product_id": 21,
+    "brand": "Kinsman Leather",
+    "specifications": {
+      "leather_grade": "Full-Grain Vegetable Tanned Tuscan Cowhide (1.8mm thickness)",
+      "lining": "10oz Heavy Duty Water-Repellent Cotton Duck Canvas",
+      "hardware": "Solid Antique Brass YKK Excella zippers and buckles",
+      "laptop_pocket": "High-density neoprene padded compartment (fits 16-inch MacBook Pro)"
+    },
+    "warranty": "25-Year Heirloom Warranty",
+    "tags": ["backpack", "leather", "accessories", "bags", "travel"],
+    "attributes": {
+      "color": "Cognac Vintage Tan",
+      "capacity": "22 Liters",
+      "dimensions": "42cm H x 30cm W x 15cm D"
+    },
+    "additional_metadata": {
+      "patina": "Develops a deep natural golden-brown patina over time"
+    }
+  },
+  {
+    "product_id": 22,
+    "brand": "AeroTitan",
+    "specifications": {
+      "frame": "Grade 5 Japanese Aerospace Titanium (Ti-6Al-4V)",
+      "lenses": "Ultra-Thin High Index Mineral Glass with Hydrophobic/Oleophobic Coating",
+      "polarization": "99.9% Glare Elimination Polarized Filter",
+      "uv_protection": "100% UV400 Protection (UVA & UVB)"
+    },
+    "warranty": "Lifetime Warranty on Titanium Frame",
+    "tags": ["sunglasses", "titanium", "polarized", "eyewear", "accessories"],
+    "attributes": {
+      "frame_color": "Brushed Gunmetal",
+      "lens_color": "Neutral Gray Contrast Lens",
+      "weight": "19g"
+    },
+    "additional_metadata": {
+      "hinges": "German screwless Monobloc barrel-free hinges"
+    }
+  },
+  {
+    "product_id": 23,
+    "brand": "RidgeLock",
+    "specifications": {
+      "plates": "6061-T6 Anodized Aircraft Aluminum Plates",
+      "capacity": "Holds 1 to 12 cards without stretching",
+      "rfid_blocking": "13.56 MHz RFID Shielding against electronic pickpocketing"
+    },
+    "warranty": "Lifetime Warranty on Elastic and Plates",
+    "tags": ["wallet", "rfid", "minimalist", "edc", "accessories"],
+    "attributes": {
+      "color": "Matte Desert Tan",
+      "dimensions": "86mm x 54mm x 6mm",
+      "weight": "48g"
+    },
+    "additional_metadata": {
+      "cash_strap": "Integrated MIL-SPEC elastic cash strap with silicone grip dots"
+    }
+  },
+  {
+    "product_id": 24,
+    "brand": "Vanguard Horology",
+    "specifications": {
+      "movement": "Calibre VH-2401 Automatic 21,600 bph, 21 Jewels",
+      "power_reserve": "42 Hours Self-Winding",
+      "crystals": "Dual Anti-Reflective Scratch-Resistant Synthetic Sapphire Crystals",
+      "case": "316L Surgical Stainless Steel Case (41mm diameter, 11.8mm thickness)",
+      "water_resistance": "10 ATM (100 meters / 330 feet)"
+    },
+    "warranty": "5 Years International Movement Warranty",
+    "tags": ["watch", "automatic", "skeleton", "mechanical", "luxury"],
+    "attributes": {
+      "dial": "Open-Work Skeletonized Dial with C3 Super-LumiNova Hands",
+      "strap": "Hand-Stitched Horween Chromexcel Leather with Deployant Clasp"
+    },
+    "additional_metadata": {
+      "accuracy": "-5 to +10 seconds per day regulated in 4 positions"
+    }
+  },
+  {
+    "product_id": 25,
+    "brand": "VoltLink",
+    "specifications": {
+      "power_delivery": "USB Power Delivery 3.1 Extended Power Range (up to 240W, 48V/5A)",
+      "data_transfer": "USB 2.0 (480 Mbps)",
+      "length": "2 Meters (6.6 Feet) per cable",
+      "bend_lifespan": "Tested to withstand 40,000+ 90-degree bend cycles"
+    },
+    "warranty": "Lifetime Replacement Warranty",
+    "tags": ["cables", "usb-c", "fast-charging", "electronics", "accessories"],
+    "attributes": {
+      "sheath": "Double-Braided Bulletproof Aramid Fiber",
+      "connectors": "Gold-Plated Aluminum Alloy Housings with Strain Relief"
+    },
+    "additional_metadata": {
+      "e_marker_chip": "Integrated smart E-Marker chip for thermal and over-voltage protection"
+    }
+  }
+]
