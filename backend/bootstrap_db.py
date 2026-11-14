@@ -2,6 +2,7 @@
 import logging
 import os
 import re
+import ssl
 from pathlib import Path
 
 import pymysql
@@ -34,6 +35,11 @@ def _sql_dir() -> Path:
 
 
 def _connect(database=None):
+    connect_args = {}
+    if os.getenv("MYSQL_SSL", "false").lower() in ("1", "true", "yes"):
+        ssl_context = ssl.create_default_context(cafile=os.getenv("MYSQL_SSL_CA") or None)
+        ssl_context.check_hostname = True
+        connect_args["ssl"] = ssl_context
     return pymysql.connect(
         host=os.getenv("MYSQL_HOST", "127.0.0.1"),
         port=int(os.getenv("MYSQL_PORT", "3312")),
@@ -43,6 +49,7 @@ def _connect(database=None):
         autocommit=True,
         charset="utf8mb4",
         connect_timeout=20,
+        **connect_args,
     )
 
 

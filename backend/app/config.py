@@ -1,8 +1,10 @@
 import os
+import ssl
 from datetime import timedelta
 from pathlib import Path
 
 from dotenv import load_dotenv
+from sqlalchemy.engine import URL
 
 _backend_dir = Path(__file__).resolve().parents[1]
 _repo_root = _backend_dir.parent
@@ -21,10 +23,19 @@ class Config:
     MYSQL_USER = os.getenv("MYSQL_USER", "root")
     MYSQL_PASSWORD = os.getenv("MYSQL_PASSWORD", "password")
     MYSQL_DATABASE = os.getenv("MYSQL_DATABASE", "ecommerce_db")
+    MYSQL_SSL = os.getenv("MYSQL_SSL", "false").lower() in ("1", "true", "yes")
+    MYSQL_SSL_CA = os.getenv("MYSQL_SSL_CA")
 
     SQLALCHEMY_DATABASE_URI = os.getenv("SQLALCHEMY_DATABASE_URI") or (
-        f"mysql+pymysql://{MYSQL_USER}:{MYSQL_PASSWORD}@{MYSQL_HOST}:{MYSQL_PORT}/{MYSQL_DATABASE}"
-        "?charset=utf8mb4"
+        URL.create(
+            "mysql+pymysql",
+            username=MYSQL_USER,
+            password=MYSQL_PASSWORD,
+            host=MYSQL_HOST,
+            port=MYSQL_PORT,
+            database=MYSQL_DATABASE,
+            query={"charset": "utf8mb4"},
+        )
     )
     SQLALCHEMY_TRACK_MODIFICATIONS = False
 
@@ -35,6 +46,10 @@ class Config:
         "pool_pre_ping": True,
         "pool_timeout": 30,
     }
+    if MYSQL_SSL:
+        ssl_context = ssl.create_default_context(cafile=MYSQL_SSL_CA or None)
+        ssl_context.check_hostname = True
+        SQLALCHEMY_ENGINE_OPTIONS["connect_args"] = {"ssl": ssl_context}
 
     MONGODB_URI = os.getenv("MONGODB_URI", "mongodb://127.0.0.1:27017")
     MONGODB_DATABASE = os.getenv("MONGODB_DATABASE", "ecommerce_nosql")
@@ -59,8 +74,15 @@ class TestingConfig(Config):
     DEBUG = False
     MYSQL_DATABASE = os.getenv("MYSQL_TEST_DATABASE", "ecommerce_test_db")
     SQLALCHEMY_DATABASE_URI = os.getenv("SQLALCHEMY_TEST_DATABASE_URI") or (
-        f"mysql+pymysql://{Config.MYSQL_USER}:{Config.MYSQL_PASSWORD}@{Config.MYSQL_HOST}:{Config.MYSQL_PORT}/{os.getenv('MYSQL_TEST_DATABASE', 'ecommerce_test_db')}"
-        "?charset=utf8mb4"
+        URL.create(
+            "mysql+pymysql",
+            username=Config.MYSQL_USER,
+            password=Config.MYSQL_PASSWORD,
+            host=Config.MYSQL_HOST,
+            port=Config.MYSQL_PORT,
+            database=os.getenv("MYSQL_TEST_DATABASE", "ecommerce_test_db"),
+            query={"charset": "utf8mb4"},
+        )
     )
     MONGODB_DATABASE = "ecommerce_test_nosql"
     JWT_ACCESS_TOKEN_EXPIRES = timedelta(minutes=60)
