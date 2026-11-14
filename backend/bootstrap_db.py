@@ -93,6 +93,8 @@ def _run_statement(cursor, statement: str, database: str):
 
 def ensure_schema():
     database = os.getenv("MYSQL_DATABASE", "ecommerce_db")
+    if not re.fullmatch(r"[A-Za-z0-9_]+", database):
+        raise ValueError("MYSQL_DATABASE must contain only letters, numbers, and underscores.")
     logger.info("Checking MySQL schema for database '%s'", database)
     conn = _connect()
     try:
@@ -100,9 +102,15 @@ def ensure_schema():
             cursor.execute("SELECT GET_LOCK('adbms_schema_init', 120)")
             cursor.fetchone()
             cursor.execute(
-                f"CREATE DATABASE IF NOT EXISTS `{database}` "
-                "CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci"
+                "SELECT SCHEMA_NAME FROM information_schema.SCHEMATA "
+                "WHERE SCHEMA_NAME = %s",
+                (database,),
             )
+            if not cursor.fetchone():
+                cursor.execute(
+                    f"CREATE DATABASE `{database}` "
+                    "CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci"
+                )
             cursor.execute(f"USE `{database}`")
             cursor.execute("SHOW TABLES LIKE 'users'")
             if cursor.fetchone():
