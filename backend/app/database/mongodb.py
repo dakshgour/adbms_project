@@ -23,8 +23,10 @@ class MongoDBDatabase:
             logger.info(f"Connected to MongoDB database '{db_name}' successfully.")
         except (ServerSelectionTimeoutError, PyMongoError) as e:
             logger.warning(
-                f"MongoDB connection failed at {uri}: {e}. "
-                "Application will operate in resilient MySQL-only mode for relational data."
+                "MongoDB connection failed (%s). "
+                "The connection details are omitted to protect credentials. "
+                "Application will operate in resilient MySQL-only mode for relational data.",
+                type(e).__name__,
             )
             self.db = None
 
