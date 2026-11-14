@@ -1,5 +1,6 @@
 from sqlalchemy import text
 from app.database import db
+from app.database.mysql import call_procedure
 from app.models import User, Product, Order, Inventory
 
 class AnalyticsService:
@@ -9,7 +10,9 @@ class AnalyticsService:
         session = db.session
 
         # 1. Total revenue & orders from stored procedure
-        proc_result = session.execute(text("CALL sp_get_sales_summary(NULL, NULL);")).fetchone()
+        rows = call_procedure(session, "CALL sp_get_sales_summary(NULL, NULL);")
+        proc_result = rows[0] if rows else None
+        session.commit()
         total_revenue = float(proc_result[0]) if proc_result and proc_result[0] is not None else 0.0
         total_orders = int(proc_result[1]) if proc_result and proc_result[1] is not None else 0
         total_units_sold = int(proc_result[2]) if proc_result and proc_result[2] is not None else 0

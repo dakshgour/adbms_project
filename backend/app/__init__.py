@@ -34,10 +34,17 @@ def create_app(config_name=None):
     )
 
     # Initialize CORS
+    raw_origins = app.config.get("CORS_ORIGINS", "*")
+    if raw_origins.strip() == "*":
+        origins = "*"
+        supports_credentials = False
+    else:
+        origins = [origin.strip() for origin in raw_origins.split(",") if origin.strip()]
+        supports_credentials = True
     CORS(
         app,
-        resources={r"/api/*": {"origins": "*"}},
-        supports_credentials=True,
+        resources={r"/api/*": {"origins": origins}},
+        supports_credentials=supports_credentials,
         allow_headers=["Content-Type", "Authorization", "Idempotency-Key"]
     )
 

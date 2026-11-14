@@ -62,4 +62,21 @@ class MySQLDatabase:
                 except Exception:
                     pass
 
+def call_procedure(session, sql, params=None):
+    """Run a stored procedure and drain every result set left by MySQL."""
+    sa_connection = session.connection()
+    proxied_connection = sa_connection.connection
+    driver = getattr(proxied_connection, "driver_connection", None) or proxied_connection
+    cursor = driver.cursor()
+    try:
+        cursor.execute(sql, params or None)
+        rows = cursor.fetchall() if cursor.description else []
+        while cursor.nextset():
+            if cursor.description:
+                cursor.fetchall()
+        return rows
+    finally:
+        cursor.close()
+
+
 db = MySQLDatabase()

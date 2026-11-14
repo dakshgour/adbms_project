@@ -1,18 +1,15 @@
-# Frontend Dockerfile for React/Vite app
-FROM node:22-alpine as build
+FROM node:22-alpine AS build
 
 WORKDIR /app
 
-# Copy package files and install dependencies
 COPY package.json package-lock.json ./
-RUN npm ci --silent
+RUN npm ci
 
-# Copy source code and build
 COPY . .
 RUN npm run build
 
-# Serve the built files using a lightweight web server
 FROM nginx:alpine
+COPY nginx.conf /etc/nginx/conf.d/default.conf
 COPY --from=build /app/dist /usr/share/nginx/html
 EXPOSE 80
 CMD ["nginx", "-g", "daemon off;"]

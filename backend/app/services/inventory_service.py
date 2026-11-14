@@ -1,5 +1,6 @@
 from sqlalchemy import text
 from app.database import db
+from app.database.mysql import call_procedure
 from app.models import Inventory, InventoryMovement, Product
 from app.utils.errors import NotFoundException, BadRequestException
 
@@ -29,8 +30,8 @@ class InventoryService:
     def get_low_stock_products():
         """Demonstrates invoking stored procedure sp_get_low_stock_products()"""
         session = db.session
-        result = session.execute(text("CALL sp_get_low_stock_products();"))
-        rows = result.fetchall()
+        rows = call_procedure(session, "CALL sp_get_low_stock_products();")
+        session.commit()
         data = []
         for r in rows:
             data.append({
@@ -54,8 +55,9 @@ class InventoryService:
             raise BadRequestException("Adjustment quantity cannot be zero.")
 
         try:
-            result = session.execute(
-                text("CALL sp_adjust_inventory(:pid, :qty, :reason, :uid);"),
+            rows = call_procedure(
+                session,
+                "CALL sp_adjust_inventory(%(pid)s, %(qty)s, %(reason)s, %(uid)s);",
                 {
                     "pid": product_id,
                     "qty": adjustment_qty,
@@ -63,8 +65,10 @@ class InventoryService:
                     "uid": user_id
                 }
             )
-            row = result.fetchone()
+            row = rows[0] if rows else None
             session.commit()
+            if row is None:
+                raise BadRequestException("Inventory adjustment did not return a result.")
             return {
                 "inventory_id": row[0],
                 "product_id": row[1],
